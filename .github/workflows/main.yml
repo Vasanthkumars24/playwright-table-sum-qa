@@ -1,0 +1,25 @@
+name: Playwright Table Sum QA
+
+on:
+  workflow_dispatch:  # allows manual run
+  push:
+    branches: [ main ]
+
+jobs:
+  sum-tables:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run Playwright QA (22f3001685@ds.study.iitm.ac.in)
+        run: npm run sum-tables
