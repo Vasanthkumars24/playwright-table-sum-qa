@@ -1,0 +1,11 @@
+{
+  "name": "playwright-table-sum-qa",
+  "version": "1.0.0",
+  "type": "commonjs",
+  "scripts": {
+    "sum-tables": "node scripts/sum_tables.js"
+  },
+  "dependencies": {
+    "playwright": "^1.41.0"
+  }
+}
